@@ -29,8 +29,34 @@ public:
 	Fixed(float res);
 	Fixed(Fixed const & r);
 	~Fixed(void);
+	Fixed &  	operator++();
+	Fixed       operator++(int);
+	Fixed &		operator--();
+	Fixed       operator--(int);
 	Fixed &		operator=(Fixed const & rhs);
-	Fixed &		operator*(Fixed const & a, Fixed const & b);
+	Fixed		operator*(Fixed const & b);
+	Fixed       operator*(int res);
+	Fixed       operator+(Fixed const &res);
+	Fixed       operator+(int res);
+	Fixed       operator-(Fixed const &res);
+	Fixed  	    operator-(int res);
+	Fixed       operator/(Fixed const &res);
+	Fixed      	operator/(int res);
+	static Fixed const	&	max(Fixed const & s1, Fixed const & s2);
+	static Fixed const	&	min(Fixed const & s1, Fixed const & s2);
+	static Fixed	&		max(Fixed  & s1, Fixed & s2);
+	static Fixed 	&	min(Fixed  & s1, Fixed & s2);
+	bool        operator==(Fixed const & s1);
+	bool        operator!=(Fixed const & s1);
+	bool        operator<=(Fixed const & s1);
+	bool        operator>=(Fixed const & s1);
+	bool        operator<(Fixed const & s1);
+	bool        operator>(Fixed const & s1);
+
+
+
+
+
 };
 
 
